@@ -1,0 +1,1 @@
+O principal objetivo é tornar as páginas webs mais dinâmicas, interativas e responsivas para o usuário. Enquanto o HTML serve para dar estrutura para a página e o CSS serve para oferecer estilo e um layout para a página, o Javascript serve para interagir com o usuário, uma forma de fazer com que o mesmo consiga manipular as informações através de uma interface visual.
