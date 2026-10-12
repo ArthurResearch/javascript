@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando título</title>
+</head>
+
+<body>
+
+    <h1>Olá, Mundo!</h1>
+    <h2>Mude o conteúdo do título: <input type="text" value="" required="true"> </h2>
+    <button>Mudar</button>
+
+    <script>
+
+        const titulo = document.querySelector('h1')
+        const campoTexto = document.querySelector('input')
+        const botao = document.querySelector('button')
+
+        let tamAleatorio = Math.random(30, 100) * (100 - 30 + 1) + 30 + "px"
+        titulo.style.fontSize = tamAleatorio
+
+        campoTexto.addEventListener("input", () => {
+            titulo.style.color = "blue"
+        })
+
+        botao.addEventListener("click", () => {
+            let texto = campoTexto.value
+            if (texto != "") {
+                titulo.innerText = texto
+                titulo.style.color = "yellow"
+            } else {
+                titulo.innerText = "Olá, Mundo!"
+                titulo.style.color = "red"
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
