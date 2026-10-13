@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Clique e veja agora qual seria a sua aventura de um livro de fantasia: </h1>
+    <h2 id="aventura"> </h2>
+    <button>Sortear</button>
+
+    <script>
+
+        const acao = ["Fuga ", "Caça ", "O ataque ", "Busca "]
+        const local = ["da Mandragora Assasina ", "Do Ubariano Feroz ", "Da Floresta Amaldiçoada ", "Do castelo ", "Do Wendigo "]
+        const adjetivo = ["Cruel", "De Eliom", "Das profundezas", "Imortal", "De Aolis"]
+        const botao = document.querySelector("button")
+        let sorteada = document.querySelector("#aventura")
+
+        function sortear(array){
+            let idx = Math.floor(Math.random() * array.length)
+            return idx
+        }
+
+        botao.addEventListener("click", ()=>{
+            let acaoSort = acao[sortear(acao)]
+            let localSort = local[sortear(local)]
+            let adjetivoSort = adjetivo[sortear(adjetivo)]
+            sorteada.innerText = acaoSort + localSort + adjetivoSort
+        })
+
+    </script>
+    
+</body>
+</html>
